@@ -23,10 +23,12 @@ import { BookingComponent } from './booking/booking.component';
   ]
 })
 export class AppModule {
+
   constructor(private injector: Injector) { }
 
   ngDoBootstrap() {
     const myCustomElement = createCustomElement(BookingComponent, { injector: this.injector });
     customElements.define('app-train-booking', myCustomElement);
   }
+
 }

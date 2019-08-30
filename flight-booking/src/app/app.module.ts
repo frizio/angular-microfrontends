@@ -23,6 +23,7 @@ import { BookingComponent } from './booking/booking.component';
   ]
 })
 export class AppModule {
+
   constructor(private injector: Injector) {
   }
 
@@ -30,4 +31,5 @@ export class AppModule {
     const myCustomElement = createCustomElement(BookingComponent, { injector: this.injector });
     customElements.define('app-flight-booking', myCustomElement);
   }
+
 }
